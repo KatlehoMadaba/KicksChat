@@ -1,0 +1,24 @@
+/* forms and pictures pages  */
+.mainGrid{
+display: grid;
+border:1px solid rgb(255, 0, 81);
+grid-template-columns:repeat(auto-fit,minmax(600px,2fr));
+gap:0px;
+justify-content: center;
+/* background-color: yellow; */
+}
+.cardLeft{
+ /* background-color: blue; */
+}
+.cardRight{
+    /* background-color: blueviolet; */
+    
+}
+.formSection{
+    /* background-color:pink; */
+    margin-top:300px;
+    margin-left:250px;
+    margin-right:100px;
+    
+
+}
