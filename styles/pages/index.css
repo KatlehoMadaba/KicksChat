@@ -1,0 +1,15 @@
+/*Headings*/
+#logoP2{
+    color:black ;
+}
+#middleHeading {
+    margin-right: 100px;
+    font-family: "F    rank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 100px;
+    background-color: yellow;
+    margin: 0 auto;
+    width: 40px;
+}
