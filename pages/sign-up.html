@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/pages/sign-up.css">
+</head>
+
+<body>
+    <div class="mainGrid">
+        <div class="cardLeft">
+            <img src="../assets/imgs/signupImg.jpg" alt="landingPage sneakers">
+        </div>
+        <div class="cardRight">
+            <div class="formSection">
+                <h1 class="primaryHeading">KicksChat</h1>
+                <h3>SignUp</h3>
+                <label class="inputLable" for="email">Email</label>
+                <input class="inputTxt" id="email" name="email" placeholder="Type messsage..." type="text" required></input>
+                <label class="inputLable" for="username">Username</label><br>
+                <input class="inputTxt" id="username" name="username" placeholder="Type messsage..." type="text" required></input>
+                <label class="inputLable" for="password">Password</label>
+                <input class="inputTxt" id="password" name="password" placeholder="Type messsage..." type="password" required pattern="(?=.*[A-Za-z](?=.*\d)(?=.*[\W_]))"></input>
+                <label class="inputLable" for="confirmPassword"> Confrim Password</label>
+                <input class="inputTxt" id="confirmPassword" name="confirmPassword" placeholder="Type messsage..." type="password" required pattern="(?=.*[A-Za-z](?=.*\d)(?=.*[\W_]))"></input>
+            </div>
+            <div class="btnGrouped">
+                <span>
+                    <a href="./pages/index,html"><button class=" btnBasics primaryBtn">SignUp</button></a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
