@@ -1,0 +1,79 @@
+/* fonts*/
+/* headingfonts */
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.frank-ruhl-libre{
+  font-family: "Frank Ruhl Libre", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.primaryHeading{
+    color:#922F94;
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 60px;
+}
+#middleHeading{
+    margin-right:100px;
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 50px;
+    padding-left:20% ;
+}
+/*buttons*/
+.btnBasics{
+    width: 267.81px;
+    height: 100px;
+    border-radius: 30%;
+    border-width: 10px;
+    font-size: 25px;
+    font-family: "Frank Ruhl Libre", serif;
+
+}
+.primaryBtn {
+    color: white;
+    background-color: #922F94;
+    border-color: #922F94;
+   
+}
+.secondaryBtn{
+    color:#922F94;
+    background-color: white;
+    border-color: #922F94;
+}
+/* forms and pictures pages  */
+.mainGrid{
+display: grid;
+/* border:1px solid rgb(255, 0, 81); */
+grid-template-columns:repeat(auto-fit,minmax(600px,2fr));
+gap:0px;
+justify-content: center;
+margin: 5%;
+/* background-color: yellow; */
+}
+.cardLeft{
+    /*Comment to be deleted /
+ /* background-color: blue; */
+}
+.cardRight{
+    /*Comment to be deleted /
+    /* background-color: blueviolet; */
+    
+}
+.formSection{
+    /* background-color:pink; */
+    align-items:end;
+    margin-top: 30%;
+    padding-left: 30%;
+    margin-top: 20%; 
+}
+.btnGrouped{
+    /* background-color: black; */
+    display:flex;
+    gap: 10px;
+    padding-left: 8%;
+}
