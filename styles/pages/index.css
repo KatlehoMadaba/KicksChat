@@ -1,0 +1,20 @@
+/*Headings*/
+#logoP2{
+    color:black ;
+}
+#middleHeading {
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 100px;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    width: 50%;
+}
+.btnGrouped {
+    /* background-color: green; */
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    padding-top: 5%;
+}
