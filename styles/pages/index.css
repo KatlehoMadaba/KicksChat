@@ -3,26 +3,18 @@
     color:black ;
 }
 #middleHeading {
-    margin-right: 100px;
-    font-family: "F    rank Ruhl Libre", serif;
-    font-optical-sizing: auto;
+    font-family: "Frank Ruhl Libre", serif;
     font-weight: 900;
     font-style: normal;
     font-size: 100px;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin: 0 auto;
-    width: 40px;
+    width: 50%;
 }
 .btnGrouped {
-    /* background-color: black; */
-    display:flexbox;/*enables flex*/
+    /* background-color: green; */
+    align-items: center;
     justify-content: center;
-    gap:10px; /*spacing between*/
-    padding-left: 8%;
-    margin-top:0;
-    margin-bottom:0;
-    width: 700px;
-    /* width: fit-content;adjusting with to fit the buttons */
-    padding-top:20%;
-    padding-bottom:10%;
+    margin: auto 0;
+    padding-top: 5%;
 }

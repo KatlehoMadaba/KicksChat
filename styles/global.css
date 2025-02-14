@@ -1,5 +1,8 @@
 /* fonts*/
 /* headingfonts */
+/* *{
+    outline: red;
+} */
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .frank-ruhl-libre {
@@ -16,26 +19,28 @@
     font-weight: 900;
     font-style: normal;
     font-size: 150px;
-    padding-right:50% ;
+    padding-right: 50%;
     /* background-color: red; */
     margin: 0 auto;
-    width: 250px;
+    min-width: 250px;
+    max-height: 800px;
 }
+
 /*buttons*/
 .btnBasics {
     width: 529px;
     height: 100px;
-    border-radius:40px;
+    border-radius: 40px;
     border-width: 10px;
     font-size: 25px;
     font-family: "Frank Ruhl Libre", serif;
 
 }
 
-.primaryBtn{
+.primaryBtn {
     color: white;
-    background: rgb(228,59,166);
-    background: linear-gradient(90deg, rgba(228,59,166,1) 0%, rgba(0,0,0,1) 35%);
+    background: rgb(228, 59, 166);
+    background: linear-gradient(90deg, rgba(228, 59, 166, 1) 0%, rgba(0, 0, 0, 1) 35%);
     outline: none;
     border: 2px;
 }
@@ -43,47 +48,70 @@
 .secondaryBtn {
     color: #922F94;
     background-color: white;
-    border: 7px solid purple ;
+    border: 7px solid purple;
+    z-index: 8;
 }
-.primaryBtn,.secondaryBtn{
-    padding: 10px 20px;
+
+.primaryBtn,
+.secondaryBtn {
+    margin: auto 0;
     cursor: pointer;
-    font-size:40px;
+    font-size: 40px;
     font-weight: 100px;
     text-align: center;
     display: inline-block;
-    width:70%;
-
+    width: 30%;
 }
+
 /* forms and pictures pages  */
 .mainGrid {
     display: grid;
-    border:1px solid rgb(255, 0, 81);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    /*border:1px solid rgb(255, 0, 81);
     grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
     gap: 0px;
     justify-content: center;
-    margin:auto 0;
-    width: 100%;
-    background-color: yellow;
+    /* margin-left:20%; */
+    /* margin:auto 0; */
+    /* background-color: yellow; */
+    overflow: scroll;
+    height: 100vh;
+    /*viewport height full height of screen*/
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
 }
 
 .cardLeft {
-    /*Comment to be deleted /
- /* background-color: blue; */
+    /*Comment to be deleted */
+    /* background-color: blue; */
+
 }
 
 .cardRight {
     /*Comment to be deleted */
-    background-color: #F5F5F5;
+    background-color: whitesmoke;
     margin: 0 auto;
-    width: 350px;
+    width: 100%;
 
+}
+
+.formImages {
+    width: 100%;
+    height: 100vh;
 }
 
 .formSection {
-    background-color: pink;
-    width: 350px;
+    /* background-color: pink; */
+    width: 100%;
     margin: 0 auto;
-    padding-top:80% ;
+    padding-left: 22%;
+    align-items: center;
+    justify-content: center;
 }
-
