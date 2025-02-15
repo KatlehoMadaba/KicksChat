@@ -56,7 +56,11 @@
     font-size: 25px;
     align-items: center;
     font-family: "Frank Ruhl Libre", serif;
-
+    display: flex;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    transition:background 1s;
 }
 
 .primaryBtn {
@@ -67,6 +71,7 @@
     align-items: center;
     justify-content: center;
     margin-left: 100%;
+
 }
 
 .secondaryBtn {
@@ -79,7 +84,6 @@
 .primaryBtn,
 .secondaryBtn {
     margin: auto 0;
-    cursor: pointer;
     font-size: 40px;
     font-weight: 100px;
     text-align: center;
@@ -96,17 +100,30 @@
     outline: none;
   }
   .inputTxt{
+      box-sizing: border-box;
+      flex-grow:1;
+      min-width:0;
+      padding: 1em;
       height: 50px;
       width:90%;
       border:4px solid var(--tertiary-color);
       line-height: 2rem;
       border-radius: 15px;
+      outline: none;
+      transition: 150ms ease;
+
   }
+  /* .inputTxt :hover{
+    border:2px var(--primary-color)
+  } */
   .inputLabel{
     font-family:"Frank Ruhl Libre", serif;
     font-size: 30px;
     color:var(--primary-color);
     font-weight: medium;
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
 
   }
   
