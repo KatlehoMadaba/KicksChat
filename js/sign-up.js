@@ -24,9 +24,10 @@ form.addEventListener('submit',(e)=>{
         let  stringInformation=JSON.stringify(informationObject);
                 console.log(stringInformation);
                
-
-        localStorage.setItem("userInformation",stringInformation);
+        let storedUsername = JSON.stringify(username.value);
+        console.log('This is the username'+storedUsername);
+        localStorage.setItem(storedUsername,stringInformation);
         console.log(localStorage);
     }
-    
+    window.location.href="./login.html"
 })
