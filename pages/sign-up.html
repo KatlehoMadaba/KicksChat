@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/pages/index.css">
+    <script src="../js/sign-up.js" defer></script>
+</head>
+<body>
+    <div class="mainGrid">
+        <div class=" box cardLeft">
+            <img src="../assets/images/signupImg.jpg" alt="landingPage sneakers" class="formImages">
+        </div>
+        <div class="box cardRight">
+            <div class="formSection">
+                <h1 class="primaryHeading onboardingHeading"><span>Kicks</span><span id="logoP2">Chat</span></h1>
+                <h3 class="secondaryformHeading">SignUp</h3>
+                <p id="error_messages"></p>
+
+                <form id="form" class="formInput">
+                <label class="inputLabel" for="email">Email</label></br>
+                <input class="inputTxt" id="email" name="email" placeholder="Please type..." type="text" required></input>
+
+                <label class="inputLabel" for="username">Username</label><br>
+                <input class="inputTxt" id="username" name="username" placeholder="Please type..." type="text" required></input>
+
+                <label class="inputLabel" for="password">Password</label><br>
+                <input class="inputTxt" id="password" name="password" placeholder="Please type..." type="password"required></input>
+
+                <label class="inputLabel" for="confirmPassword"> Confirm Password</label><br>
+                <input class="inputTxt" id="confirmPassword" name="confirmPassword" placeholder="Please type..."type="password" required ></input>
+
+                <div class="signloginBtn">
+                        <button class="btnBasics primaryBtn">SignUp</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
