@@ -1,25 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-:root {
-    --primary-color: #922F94;
-    --primary-font:"Frank Ruhl Libre", serif; font-optical-sizing: auto; font-weight: 900; font-style: normal; font-optical-sizing: auto; font-style: normal; box-sizing: border-box;
-    --primary-btn-background: linear-gradient(90deg, rgba(228, 59, 166, 1) 0%, rgba(0, 0, 0, 1) 35%);
-    --seconday-color: #000000;
-    --tertiary-color:#E43BA6;
-    --quaternary-color:#AEA8AE;
-}
+
 .frank-ruhl-libre {
     font-family: "Frank Ruhl Libre", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
-.onboardingHeading{
-    background-color: brown;
 
-}
 .primaryHeading {
-    color: var(--primary-color);
-    font-family: var(--primary-font);
+    color: #922F94;
     font-family: "Frank Ruhl Libre", serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -31,22 +20,7 @@
     min-width: 250px;
     max-height: 800px;
 }
-.secondaryformHeading {
-    font-family: var(--primary-font);
-    color:var(--seconday-color);
-    font-weight: 900;
-    font-style: normal;
-    font-size: 400%;
-    /* background-color: yellow; */
-    margin: 0 auto;
-    width: 50%;
-}
-#middleHeading {
-    margin-right: 100px;
-    font-family: var(--primary-font);
-    font-size: 100px;
-    padding-left: 20%;
-}
+
 /*buttons*/
 .btnBasics {
     width: 529px;
@@ -54,25 +28,22 @@
     border-radius: 40px;
     border-width: 10px;
     font-size: 25px;
-    align-items: center;
     font-family: "Frank Ruhl Libre", serif;
 
 }
 
 .primaryBtn {
     color: white;
-    background:var(--primary-btn-background);
+    background: rgb(228, 59, 166);
+    background: linear-gradient(90deg, rgba(228, 59, 166, 1) 0%, rgba(0, 0, 0, 1) 35%);
     outline: none;
     border: 2px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 100%;
 }
 
 .secondaryBtn {
-    color: var(--primary-color);
+    color: #922F94;
     background-color: white;
-    border: 7px solid var(--primary-color);
+    border: 7px solid purple;
     z-index: 8;
 }
 
@@ -86,30 +57,6 @@
     display: inline-block;
     width: 30%;
 }
-/*Input Boxes and  input labels*/
-.searchInput{
-    margin-top:150px;
-    border:5px solid var(--seconday-color);
-    width: 60rem;
-    border-radius:15px;
-    line-height:3rem;
-    outline: none;
-  }
-  .inputTxt{
-      height: 50px;
-      width:90%;
-      border:4px solid var(--tertiary-color);
-      line-height: 2rem;
-      border-radius: 15px;
-  }
-  .inputLabel{
-    font-family:"Frank Ruhl Libre", serif;
-    font-size: 30px;
-    color:var(--primary-color);
-    font-weight: medium;
-
-  }
-  
 
 /* forms and pictures pages  */
 .mainGrid {
@@ -149,135 +96,17 @@
     width: 100%;
 
 }
-/*form section*/
+
 .formImages {
     width: 100%;
     height: 100vh;
 }
 
 .formSection {
-    background-color: pink;
+    /* background-color: pink; */
     width: 100%;
     margin: 0 auto;
     padding-left: 22%;
     align-items: center;
     justify-content: center;
-
-}
-.formInput{
-    background-color: aqua;
-}
-.signloginBtn{
-    background-color: #E43BA6;
-    align-items: center;
-    justify-content: center;
-    margin: auto 0;
-    padding-top: 5%;
-    padding-bottom:5%;
-}
-/*In app styles */
-
-/*contact list*/
-.contactName{
-    color:var(--primary-color);
-    font-family: var(--primary-font);
-    font-size: 48px;
-    display: inline-block;
-    padding-left: 20%;
-}
-.iconContact{
-        display: inline-block;
-        width:48px;
-        height:48px;
-        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23000' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M6 40.8V42h36v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C35.92 28 33.68 28 29.2 28H18.8c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C6 34.08 6 36.32 6 40.8'/%3E%3C/svg%3E");
-        background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: 100% 100%;
-        mask-size: 100% 100%;
-        padding-left: 10%;
-}
-.contactList{
-    border: 10px solid var(--tertiary-color);
-    border-radius:15px;
-}
-/* Icon imported*/
-.gchatBtn {
-    display: inline-block;
-    width: 5em;
-    height: 5em;
-    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M5.5 7a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m4.422-.77A5.5 5.5 0 0 1 11.5 6a5.5 5.5 0 0 1 1.578.23a2 2 0 1 0-3.155 0M7.257 8H3a1.5 1.5 0 0 0-1.5 1.5v.075s0 2.925 4 2.925q.309 0 .587-.023A5.5 5.5 0 0 1 6 11.5c0-1.33.472-2.55 1.257-3.5m4.243 8a4.5 4.5 0 1 0-3.936-2.318l-.545 1.789a.41.41 0 0 0 .51.51l1.79-.544A4.5 4.5 0 0 0 11.5 16M9 10.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E");
-    background-color: currentColor;
-    -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100%;
-}
-/*Header Section*/
-.mainHeader {
-    background-color: var(--tertiary-color);
-    position: fixed;
-    display: inline-block;
-    flex-flow: row;
-    min-width: 2rem;
-    width: 100%;
-    overflow: hidden;
-
-}
-.headerContent {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    margin-left: 5%;
-}
-.profileContainer {
-    background-color: #FFF;
-    height: 4rem;
-    width: 4rem;
-    border: 3px solid yellow;
-    border-radius: 50%;
-    align-items: center;
-    justify-items: center;
-}
-
-.initialLetter {
-    font-size: 50px;
-    margin-top: 10%;
-    font-family: var(--primary-font);
-    position: relative;
-    margin: auto;
-    text-align: center;
-    /* margin-left:70%;
-    border-width:50%;
-    display:inline; */
-
-}
-
-.headerTitle {
-    margin-left: 40%;
-    display: inline-block;
-}
-
-.secondaryHeader {}
-
-.chatGrid {
-}
-
-.icons {}
-
-.sendBubble {}
-
-.recievedBubble {
-    margin-top: 10%;
-}
-.currentContact{
-    margin-top: 10%;
-    font-family: var(--primary-font);
-    font-size:100px;
-    margin-left: 25%;
-    z-index: 5;
 }
