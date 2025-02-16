@@ -27,7 +27,7 @@ form.addEventListener("submit", (e) => {
       userExists.style.display = "block";
     }
   }
-  //Storing information for if the user does not exist
+  //
   else {
     let informationObject = {
       email: email.value,
@@ -35,7 +35,8 @@ form.addEventListener("submit", (e) => {
       password: password.value,
       confirmPassword: confirmPassword.value,
     };
-    const stringifyInformation = JSON.stringify(informationObject);
+   
+    const stringifyInformation = JSON.stringify(informationObject);//converting the informationObject into a string
     localStorage.setItem(email.value, stringifyInformation);
     console.log("user doesnt exist and is now stored");
     console.log("This is email: " + email.value.toString());

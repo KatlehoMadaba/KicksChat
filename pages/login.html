@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/pages/login.css">
+    <script src="../js/login.js" defer></script>
 </head>
+
 <body>
     <div class="mainGrid">
         <div class=" box cardLeft">
@@ -16,17 +19,20 @@
             <div class="formSection">
                 <h1 class="primaryHeading onboardingHeading"><span>Kicks</span><span id="logoP2">Chat</span></h1>
                 <h3 class="secondaryformHeading">Login</h3>
-                <div class="formInput">
-                <label class="inputLabel" for="username">Username</label><br>
-                <input class="inputTxt" id="username" name="username" placeholder="Please type..." type="text"
-                    required></input>
-                <label class="inputLabel" for="password">Password</label><br>
-                <input class="inputTxt" id="password" name="password" placeholder="Please type..." type="password"
-                    required pattern="(?=.*[A-Za-z](?=.*\d)(?=.*[\W_]))"></input>
-                <div class="signloginBtn">
+                <p id="unregistredUser" style="display:none;">Please sign-up before you login <a
+                        href="../pages/sign-up.html">sign-up<a></p>
+                <p id="incorrectPassword" style="display:none;">Your password is inccorect please try again.</p>
+                <form class="formInput" id="form">
+                    <label class="inputLabel" for="email">Email</label><br>
+                    <input class="inputTxt" id="email" name="email" placeholder="Please type..." type="text"
+                        required></input>
+                    <label class="inputLabel" for="password">Password</label><br>
+                    <input class="inputTxt" id="password" name="password" placeholder="Please type..." type="password"
+                        required></input>
+                    <div class="signloginBtn">
                         <button class="btnBasics primaryBtn">Login</button>
-                </div>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
