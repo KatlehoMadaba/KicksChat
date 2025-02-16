@@ -8,7 +8,7 @@ window.onload = function() {
   console.log(objectJSON.username);
   //retriving only the username from the object
   const domUsername=objectJSON.username
-  //displaying username in broswer
+  //displaying username in
   const showUsername=document.getElementById('showUsername');
   showUsername.textContent=domUsername;
 };

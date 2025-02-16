@@ -6,7 +6,7 @@ const confirmPassword = document.getElementById("confirmPassword");
 const error_messages = document.getElementById("error_messages");
 const userExists = document.getElementById("userExists");
 //Retrieving email for validation
-const existingUser = email.value.toString();
+const existingUser = email.value;
 const emailJson = JSON.parse(localStorage.getItem(existingUser));
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault(); //Prevents form from auto submitting
@@ -19,6 +19,12 @@ signupForm.addEventListener("submit", (e) => {
   if (errors.length > 0) {
     error_messages.innerHTML = errors.join("<br>");
   }
+  //storing email in a session 
+  const emailInput = email.value;
+  sessionStorage.setItem('email',emailInput)
+  const emailSession =sessionStorage.getItem('email')
+  console.log('Sign up email session'+ emailSession);
+
   //Validating if user exists
   if (!emailJson === null) {
     const emailValue = emailJson.email;
@@ -27,7 +33,6 @@ signupForm.addEventListener("submit", (e) => {
       userExists.style.display = "block";
     }
   }
-  //
   else {
     let informationObject = {
       email: email.value,
