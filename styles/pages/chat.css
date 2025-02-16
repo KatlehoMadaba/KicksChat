@@ -1,0 +1,23 @@
+.textRecieved {}
+
+.textSent {}
+
+.messageSent {
+    color: green;
+    float: right;
+    position: left;
+    border-color: black;
+    background-color: aqua;
+    margin-left: 2000%;
+    padding-left: 240px;
+}
+
+.messagesRecieved {
+    color: black;
+    float: right;
+    position: left;
+    border-color: pink;
+    background-color:red ;
+    margin-right: 200%;
+    padding-right: 85px;
+}
