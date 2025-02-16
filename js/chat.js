@@ -11,16 +11,6 @@ window.onload = function() {
   const showUsername=document.getElementById('showUsername');
   showUsername.textContent=domUsername;
 
-
-  // const textRecieved=document.getElementById('textRecieved');
-  // //retriving value stored in local storage
-  // textSent.localStorage.getItem("value")
-  
-  // sendBtn.addEventListener('submit',(e)=>{
-    //   e.preventDefault();
-    //   localStorage.setItem("value",chatContainer.value);
-    //   textSent.textContent=localStorage.getItem("value")
-    // })
     const sendBtn= document.getElementById('sendBtn');
     const chatContainer=document.getElementById('chatContainer');
     const messageInput=document.getElementById('messageInput');
@@ -28,10 +18,21 @@ window.onload = function() {
 
 sendBtn.addEventListener('click',(e)=>{
   e.preventDefault();
-  const messageValue=messageInput.value;
-  localStorage.setItem("message",messageValue)
-  console.log("Message saved to localSorage:",messageValue)
-  textSent.textContent=messageValue
-})
 
+  const messageValue=messageInput.value;
+  console.log("Message saved to localSorage:",messageValue + "By this email address"+emailAddress)
+  const dateTime=new Date().toString();
+  let messages={
+    email: emailAddress,
+    username: domUsername,
+    message: messageInput.value,
+    date_time: dateTime,
+    status:"sent"
+  }
+  const messagesJson= JSON.stringify(messages);
+  localStorage.setItem("messages",messagesJson);
+  const stringmesageObj=localStorage.getItem("messages");
+  console.log(stringmesageObj);
+  textSent.textContent=stringmesageObj.message
+})
 };
