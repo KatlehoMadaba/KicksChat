@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/pages/login.css">
     <script src="../js/login.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
 </head>
 
 <body>
@@ -22,7 +24,7 @@
                 <p id="unregistredUser" style="display:none;">Please sign-up before you login <a
                         href="../pages/sign-up.html">sign-up<a></p>
                 <p id="incorrectPassword" style="display:none;">Your password is inccorect please try again.</p>
-                <form class="formInput" id="form">
+                <form class="formInput" id="loginForm">
                     <label class="inputLabel" for="email">Email</label><br>
                     <input class="inputTxt" id="email" name="email" placeholder="Please type..." type="text"
                         required></input>
@@ -30,7 +32,7 @@
                     <input class="inputTxt" id="password" name="password" placeholder="Please type..." type="password"
                         required></input>
                     <div class="signloginBtn">
-                        <button class="btnBasics primaryBtn">Login</button>
+                        <button class="btnBasics primaryBtn" type="submit">Login</button>
                     </div>
                 </form>
             </div>

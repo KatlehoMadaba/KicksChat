@@ -1,4 +1,4 @@
-const form = document.getElementById("form");
+const signupForm = document.getElementById("signupForm");
 const email = document.getElementById("email");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
@@ -8,7 +8,7 @@ const userExists = document.getElementById("userExists");
 //Retrieving email for validation
 const existingUser = email.value.toString();
 const emailJson = JSON.parse(localStorage.getItem(existingUser));
-form.addEventListener("submit", (e) => {
+signupForm.addEventListener("submit", (e) => {
   e.preventDefault(); //Prevents form from auto submitting
   //Displays error for password that doesnt exists
   let errors = [];
