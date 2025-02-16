@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KicksChat</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/pages/chat.css">
+    <script src="../js/chat.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="mainHeader">
+        <div class="profileContainer">
+            <p class="initialLetter">K</p>
+        </div>
+        <h1 class="logo"><span class="logoP1">Kicks</span><span class="logoP2">Chat</span></h1>
+        <div class="gchatBtn"></div>
+    </header>
+
+    <div class="mainGrid">
+        <!-- Left Side - Contacts List -->
+        <aside class="cardLeft">
+            <div class="searchContainer">
+                <input type="text" class="searchInput" placeholder="Search">
+            </div>
+            <ul class="contactList">
+                <li class="contactItem">
+                    <span class="contactIcon"></span>
+                    <span class="contactName">Thembi</span>
+                    <span class="contactTime">19:00</span>
+                </li>
+                <li class="contactItem">
+                    <span class="contactIcon"></span>
+                    <span class="contactName">Lihlumise</span>
+                    <span class="contactTime">17:00</span>
+                </li>
+                <li class="contactItem">
+                    <span class="contactIcon"></span>
+                    <span class="contactName">Rapudi</span>
+                    <span class="contactTime">16:00</span>
+                </li>
+                <li class="contactItem">
+                    <span class="contactIcon"></span>
+                    <span class="contactName">Kopano</span>
+                    <span class="contactTime">15:00</span>
+                </li>
+                <li class="contactItem">
+                    <span class="contactIcon"></span>
+                    <span class="contactName">Dineo</span>
+                    <span class="contactTime">14:00</span>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Right Side - Chat Section -->
+        <section class="cardRight" id="chatSection">
+            <div class="chatHeader">
+                <span class="iconContact"></span>
+                <h1 class="username">Thembi</h1>
+                <span class="chatDate">2025/02/11</span>
+            </div>
+
+            <div class="chatMessages">
+                <div class="messageSent">Hey, how are you today? <span class="messageTime">18:00</span></div>
+                <div class="messageSent">Hey, how are you today? <span class="messageTime">19:10</span></div>
+                <div class="messageReceived">Hey, how are you today? <span class="messageTime">19:00</span></div>
+                <div class="messageReceived">Hey, how are you today? <span class="messageTime">19:30</span></div>
+            </div>
+
+            <div class="txtareaContainer">
+                <textarea class="messageInput" placeholder="Type message..."></textarea>
+                <button class="sendBtn">Send</button>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
