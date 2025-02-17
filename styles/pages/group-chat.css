@@ -1,0 +1,298 @@
+
+:root {
+    --primary-color: #922F94;
+    --primary-font:"Frank Ruhl Libre", serif; font-optical-sizing: auto; font-weight: 900; font-style: normal; font-optical-sizing: auto; font-style: normal; box-sizing: border-box;
+    --primary-btn-background: linear-gradient(90deg, rgba(228, 59, 166, 1) 0%, rgba(0, 0, 0, 1) 35%);
+    --seconday-color: #000000;
+    --tertiary-color:#E43BA6;
+    --quaternary-color:#AEA8AE;
+}
+.personalchatBtn{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M7 9h10c.55 0 1 .45 1 1s-.45 1-1 1H7c-.55 0-1-.45-1-1s.45-1 1-1m6 5H7c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1m4-6H7c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1'/%3E%3C/svg%3E");
+    background-color: var(--seconday-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+.mainHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9B59B6;
+    padding: 10px 20px;
+    color: white;
+}
+
+.profileContainer {
+    background-color: white;
+    color:var(--seconday-color);
+    width:7%;
+    height:6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 50px;
+}
+.gchatBtn{
+    width: 5em;
+    height: 5em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M5.5 7a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m4.422-.77A5.5 5.5 0 0 1 11.5 6a5.5 5.5 0 0 1 1.578.23a2 2 0 1 0-3.155 0M7.257 8H3a1.5 1.5 0 0 0-1.5 1.5v.075s0 2.925 4 2.925q.309 0 .587-.023A5.5 5.5 0 0 1 6 11.5c0-1.33.472-2.55 1.257-3.5m4.243 8a4.5 4.5 0 1 0-3.936-2.318l-.545 1.789a.41.41 0 0 0 .51.51l1.79-.544A4.5 4.5 0 0 0 11.5 16M9 10.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E");
+    background-color: var(--seconday-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100%;
+  }
+
+.logo {
+    font-size: 70px;
+}
+
+.logoP1 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logoP2 {
+    color: var(--seconday-color);
+}
+.chattingGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: calc(100vh - 60px);
+}
+.cardLeft {
+    background-color: white;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+}
+.searchContainer {
+    display: flex;
+    padding: 5px;
+    background: #eee;
+    border-radius: 5px;
+}
+.searchInput {
+    width: 100%;
+    height: 50px;
+    border-color: 10px solid black;
+    border-radius: 50px;
+    padding: 5px;
+    outline: none;
+    background: transparent;
+}
+
+.contactItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin: 5px 0;
+    border-radius: 30px;
+    height: 100px;
+    background-color: #fff;
+    cursor: pointer;
+    border: 5px solid var(--tertiary-color);
+}
+
+.contactItem:hover {
+    background-color: #F8BBD0;
+}
+.groupIcon{
+        display: inline-block;
+        width:80px;
+        height:80px;
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M5.5 7a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m4.422-.77A5.5 5.5 0 0 1 11.5 6a5.5 5.5 0 0 1 1.578.23a2 2 0 1 0-3.155 0M7.257 8H3a1.5 1.5 0 0 0-1.5 1.5v.075s0 2.925 4 2.925q.309 0 .587-.023A5.5 5.5 0 0 1 6 11.5c0-1.33.472-2.55 1.257-3.5m4.243 8a4.5 4.5 0 1 0-3.936-2.318l-.545 1.789a.41.41 0 0 0 .51.51l1.79-.544A4.5 4.5 0 0 0 11.5 16M9 10.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E");
+        background-color: currentColor;
+        -webkit-mask-image: var(--svg);
+        mask-image: var(--svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+}
+.groupName{
+    font-size: 40px ;
+}
+
+.iconContact {
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left:5% ;
+}
+.iconContact{
+    width:48px;
+    height:48px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23000' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M6 40.8V42h36v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C35.92 28 33.68 28 29.2 28H18.8c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C6 34.08 6 36.32 6 40.8'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+.contactName {
+    flex-grow: 1;
+    padding-top: 5px;
+    padding-left: 40%;
+    font-family: var(--primary-font);
+    font-size: 50px;
+}
+.contactTime {
+    font-size: 25px;
+    color: gray;
+    padding-right: 25px;
+}
+.cardRight {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 15px;
+}
+.chatHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--seconday-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chatMessages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background: 
+    url("../../assets/images/chatbgImg.jpg");
+    background-size:cover;
+}
+.messageBubble {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    opacity: 0.9; 
+    overflow-wrap: break-word; 
+    word-break: break-word; 
+    min-width: 50px;
+}
+.messageSent, .messageReceived {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 70%;
+    opacity: 0.9;
+    word-wrap: break-word;
+}
+.messageSent {
+    background-color: var(--quaternary-color); 
+    color: var(--seconday-color);
+    justify-content: flex-end; 
+    opacity: 0.8;
+}
+.messageSender{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom:5px;
+}
+.messageReceived {
+    background-color: var(--tertiary-color);
+    color: var(--seconday-color);
+    opacity: 0.8;
+}
+.messageText {
+    max-width: 85%; 
+
+    margin: auto 0;
+}
+.messageTime {
+    font-size: 1.5rem;
+    color: var(--seconday-color);
+    margin-left: 10px;
+    margin-bottom: 50px;
+    flex-shrink: 0; 
+}
+
+.txtareaContainer {
+    display: flex;
+    height: 60px;
+    padding-left:40px;
+    padding-top:10px;
+    padding-right: 10px;
+    border: 2px solid var(--seconday-color);
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: "Frank Ruhl Libre", serif;
+    resize: none;
+    box-sizing: border-box ;
+    background-color: #f9f9f9;
+    /* transition: border-color 0.3s; */
+    width: 90%;
+}
+
+.messageInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sendBtn {
+    margin-right: 5%;
+    margin-top: 30%;
+    margin-bottom:10% ;
+    position: absolute;
+    top:50%;
+    padding: 10px 15px;
+    background-color: #000000;
+    border: none;
+    border-radius:50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    right: 10px;
+    display: inline-block;
+    width:55px;
+    height:55px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M2.01 21L23 12L2.01 3L2 10l15 2l-15 2z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.sendBtn:hover {
+    background: #C2185B;
+}
+.viewBtn{
+    background-color:var(--primary-color);
+    margin-right:10px ;
+    border-radius: 10px;
+}
+
+
