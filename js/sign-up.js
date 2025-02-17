@@ -5,60 +5,58 @@ const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const error_messages = document.getElementById("error_messages");
 const userExists = document.getElementById("userExists");
-//Retrieving email for validation
-const existingUser = email.value;
-const emailJson = JSON.parse(localStorage.getItem(existingUser));
+
 signupForm.addEventListener("submit", (e) => {
-  e.preventDefault(); //Prevents form from auto submitting
-  //Displays error for password that doesnt exists
+  e.preventDefault(); // Prevent form from auto submitting
+
   let errors = [];
+  
+  // Check if password and confirm password match
   if (password.value !== confirmPassword.value) {
-    e.preventDefault(); //Prevents form from auto submitting
     errors.push("Password does not match");
-    password.value="";
-    confirmPassword="";
+    password.value = "";
+    confirmPassword.value = "";
   }
+
   if (errors.length > 0) {
     error_messages.innerHTML = errors.join("<br>");
+    return; // Prevent form submission if there are errors
   }
-  //storing email in a session 
-  const emailInput = email.value;
-  sessionStorage.setItem('email',emailInput)
-  const emailSession =sessionStorage.getItem('email')
-  console.log('Sign up email session'+ emailSession);
 
-  //Validating if user exists
-  if (emailJson !== null) {
-    const emailValue = emailJson.email;
-    if (existingUser === emailValue) {
-      console.log("The user does exist");
-      userExists.style.display = "block";
-    }
-  }
-  else {
+  // Storing email in session storage
+  const emailInput = email.value;
+  sessionStorage.setItem('email', emailInput);
+  const emailSession = sessionStorage.getItem('email');
+  console.log('Sign up email session' + emailSession);
+
+  // Get the contact list from local storage
+  let contactList = JSON.parse(localStorage.getItem("contactList")) || [];
+
+  // Check if the user already exists
+  const existingUser = contactList.find(user => user.email === emailInput);
+
+  if (existingUser) {
+    // If user exists
+    console.log("The user already exists");
+    userExists.style.display = "block";
+  } else {
     let informationObject = {
-      email: email.value,
+      email: emailInput,
       username: username.value,
       password: password.value,
       confirmPassword: confirmPassword.value,
     };
-    //get the contact list
-    let contactList=JSON.parse(localStorage.getItem("contactList"));
 
-    if(!Array.isArray((contactList))){
-      contactList=[];
-    }
-    //adding new user to the contact list 
+    // Add the new usert
     contactList.push(informationObject);
-    //adding new contact to local storage
-    localStorage.setItem("contactList",JSON.stringify(contactList));
-   
-    const stringifyInformation = JSON.stringify(informationObject);//converting the informationObject into a string
-    localStorage.setItem(email.value, stringifyInformation);
-    console.log("user doesnt exist and is now stored");
-    console.log("This is email: " + email.value.toString());
-    addEventListener("click", () => {
-      window.location.href = "../pages/chat.html";
-    });
+    
+    localStorage.setItem("contactList", JSON.stringify(contactList));
+
+    // Save new user
+    const stringifyInformation = JSON.stringify(informationObject);
+    localStorage.setItem(emailInput, stringifyInformation);
+
+    console.log("User doesn't exist and is now stored");
+    window.location.href = "../pages/chat.html";
   }
 });

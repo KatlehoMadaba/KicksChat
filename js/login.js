@@ -20,20 +20,16 @@ loginForm.addEventListener("submit", (e) => {
   if (!informationObject) {
     unregistredUser.style.display = "block";
   } else {
-    if (
-      informationObject.email == emailInput &&
-      informationObject.password == passwordInput
-    ) {
+    if (informationObject.email == emailInput &&informationObject.password == passwordInput) {
       console.log("this user exists");
-      addEventListener("click", () => {
         window.location.href = "../pages/chat.html";
-      });
     } else if (
       informationObject.email == emailInput ||
       !informationObject.password == passwordInput
     ) {
       console.log("your password or email is in correct ");
       incorrectPassword.style.display = "block";
+      password.value=""
     }
   }
 });

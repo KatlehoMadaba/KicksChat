@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>groupChat</title>
+    <!-- <link rel="stylesheet" href="../styles/global.css"> -->
+    <link rel="stylesheet" href="../styles/pages/chat.css">
+    <link rel="stylesheet" href="../styles/pages/group-chat.css">
+    <script src="../js/group.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="profileContainer">
+            <p id="initialLetter"></p>
+        </div>
+        <h1 class="logo"><span class="logoP1">Kicks</span><span class="logoP2">Chat</span></h1>
+        <span class="personalchatBtn"></span>
+    </header>
+    <div class="chattingGrid">
+        <div class="cardLeft">
+            <div class="searchConatiner">
+                <input type="text" class="searchInput" placeholder="Search">
+            </div>
+            <div id="contactContainer">
+                <!--displaying only one group-->
+                <ul>
+                    <li class="contactItem">
+                    <span class="iconContact"></span>
+                    <span class="contactName">NikeGroup</span>
+                    <span id="time"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- chat side  -->
+        <section class="box cardRight" id="chatSection">
+            <div class="chatHeader">
+                <span class="groupIcon"></span>
+                <h1 class="groupName" id="showUsername">Nike Group</h1>
+                <span class="chatDate"></span>
+            </div>
+            <div class="chatMessages" id="chatMessages">
+                <div id="textMessage" class="messageSent"></div>
+                <div id="textMessage" class="messageReceived"></div>
+            </div>
+            <div id="chatContainer">
+                <textarea class="txtareaContainer" placeholder="Please type your message here.." id="messageInput"></textarea>
+            </div>
+            <button class="sendBtn" id="sendBtn">Send</button>
+        </section>
+    </div>
+</body>
+</html>
