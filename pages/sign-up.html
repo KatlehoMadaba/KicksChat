@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/pages/sign-up.css">
     <script src="../js/sign-up.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <div class="mainGrid">
@@ -19,12 +20,12 @@
                 <h3 class="secondaryformHeading">SignUp</h3>
                 <p id="error_messages"></p>
                 <p id="userExists" style="display:none">You are already registered as a user <a href="../pages/login.html">login</a></p>
-                <form id="form" class="formInput">
+                <form id="signupForm" class="formInput">
                 <label class="inputLabel" for="email">Email</label></br>
-                <input class="inputTxt" id="email" name="email" placeholder="Please type..." type="text" required></input>
+                <input class="inputTxt" id="email" name="email" placeholder="Please type..." required type="email"></input>
 
                 <label class="inputLabel" for="username">Username</label><br>
-                <input class="inputTxt" id="username" name="username" placeholder="Please type..." type="text" required></input>
+                <input class="inputTxt" id="username" name="username" placeholder="Please type..."  required></input>
 
                 <label class="inputLabel" for="password">Password</label><br>
                 <input class="inputTxt" id="password" name="password" placeholder="Please type..." type="password"required></input>
@@ -33,7 +34,7 @@
                 <input class="inputTxt" id="confirmPassword" name="confirmPassword" placeholder="Please type..."type="password" required ></input>
 
                 <div class="signloginBtn">
-                        <button class="btnBasics primaryBtn">SignUp</button>
+                        <button class="btnBasics primaryBtn" type="submit">SignUp</button>
                 </div>
                 </form>
             </div>

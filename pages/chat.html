@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <!-- <link rel="stylesheet" href="../styles/global.css"> -->
+    <link rel="stylesheet" href="../styles/pages/chat.css">
+    <script src="../js/chat.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="profileContainer">
+            <p id="initialLetter"></p>
+        </div>
+        <h1 class="logo"><span class="logoP1">Kicks</span><span class="logoP2">Chat</span></h1>
+        <span class="gchatBtn"></span>
+    </header>
+    <div class="chattingGrid">
+        <div class="cardLeft">
+            <div class="searchConatiner">
+                <input type="text" class="searchInput" placeholder="Search">
+            </div>
+            <div id="contactContainer">
+            </div>
+        </div>
+        <section class="box cardRight" id="chatSection">
+            <div class="chatHeader">
+                <span class="iconContact"></span>
+                <h1 class="username" id="showUsername"></h1>
+                <span class="chatDate">2025/02/11</span>
+            </div>
+            <div class="chatMessages" id="chatMessages">
+                <div id="textSent" class="messageSent"></div>
+                <div id="textRecieved" class="messageReceived"></div>
+            </div>
+            <div id="chatContainer">
+                <textarea class="txtareaContainer" placeholder="Please type your message here.."id="messageInput"></textarea>
+            </div>
+            <button class="sendBtn" id="sendBtn"></button>
+        </section>
+    </div>
+</body>
+
+</html>

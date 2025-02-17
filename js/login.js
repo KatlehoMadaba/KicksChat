@@ -1,15 +1,19 @@
 const username = document.getElementById("username");
 const password = document.getElementById("password");
-const form = document.getElementById("form");
+const loginForm = document.getElementById("loginForm");
 const email = document.getElementById("email");
 const unregistredUser = document.getElementById("unregistredUser");
 const incorrectPassword = document.getElementById("incorrectPassword");
 
-form.addEventListener("submit", (e) => {
+loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  //convert email input value to string
+  //convert input values to string
   const emailInput = email.value;
   const passwordInput = password.value;
+  //storing email in a session 
+  sessionStorage.setItem('email',emailInput)
+  const emailSession=sessionStorage.getItem('email')
+  console.log("email session saved :" + emailSession)
   //returns JavaScript object stored in local storage as JSON object matching emailInput key
   const informationObject = JSON.parse(localStorage.getItem(emailInput));
 
