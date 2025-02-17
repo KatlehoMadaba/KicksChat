@@ -14,7 +14,7 @@
     font-style: normal;
 }
 .onboardingHeading{
-    background-color: brown;
+    /* background-color: brown; */
 
 }
 .primaryHeading {
@@ -190,7 +190,7 @@
     /* background-color: aqua; */
 }
 .signloginBtn{
-    background-color: #E43BA6;
+    /* background-color: #E43BA6; */
     align-items: center;
     justify-content: center;
     margin: auto 0;
