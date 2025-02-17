@@ -14,13 +14,13 @@ signupForm.addEventListener("submit", (e) => {
   let errors = [];
   if (password.value !== confirmPassword.value) {
     e.preventDefault(); //Prevents form from auto submitting
-    errors.push("Password word do not match");
+    errors.push("Password does not match");
     password.value="";
-    confirmPassword.value="";
+    confirmPassword="";
   }
   if (errors.length > 0) {
     error_messages.innerHTML = errors.join("<br>");
-  
+  }
   //storing email in a session 
   const emailInput = email.value;
   sessionStorage.setItem('email',emailInput)
@@ -57,9 +57,8 @@ signupForm.addEventListener("submit", (e) => {
     localStorage.setItem(email.value, stringifyInformation);
     console.log("user doesnt exist and is now stored");
     console.log("This is email: " + email.value.toString());
-    addEventListener("sumbit", () => {
-    window.location.href = "../pages/chat.html";
+    addEventListener("click", () => {
+      window.location.href = "../pages/chat.html";
     });
   }
-}
 });
