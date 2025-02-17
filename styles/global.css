@@ -15,7 +15,7 @@
     font-style: normal;
 }
 .onboardingHeading{
-    background-color: brown;
+    /* background-color: brown; */
 
 }
 .primaryHeading {
@@ -165,17 +165,17 @@ font-size:80px;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: yellow ;
+    /* background-color: yellow ; */
 }
 
 .cardLeft {
     /*Comment to be deleted */
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .cardRight {
     /*Comment to be deleted */
-    background-color: yellow ;
+    /* background-color: yellow ; */
     margin: 0 auto;
     width: 100%;
 
@@ -204,7 +204,7 @@ font-size:80px;
     /* background-color: aqua; */
 }
 .signloginBtn{
-    background-color: #E43BA6;
+    /* background-color: #E43BA6; */
     align-items: center;
     justify-content: center;
     margin: auto 0;

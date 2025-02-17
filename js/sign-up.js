@@ -15,10 +15,12 @@ signupForm.addEventListener("submit", (e) => {
   if (password.value !== confirmPassword.value) {
     e.preventDefault(); //Prevents form from auto submitting
     errors.push("Password word do not match");
+    password.value="";
+    confirmPassword.value="";
   }
   if (errors.length > 0) {
     error_messages.innerHTML = errors.join("<br>");
-  }
+  
   //storing email in a session 
   const emailInput = email.value;
   sessionStorage.setItem('email',emailInput)
@@ -26,7 +28,7 @@ signupForm.addEventListener("submit", (e) => {
   console.log('Sign up email session'+ emailSession);
 
   //Validating if user exists
-  if (!emailJson === null) {
+  if (emailJson !== null) {
     const emailValue = emailJson.email;
     if (existingUser === emailValue) {
       console.log("The user does exist");
@@ -40,13 +42,24 @@ signupForm.addEventListener("submit", (e) => {
       password: password.value,
       confirmPassword: confirmPassword.value,
     };
+    //get the contact list
+    let contactList=JSON.parse(localStorage.getItem("contactList"));
+
+    if(!Array.isArray((contactList))){
+      contactList=[];
+    }
+    //adding new user to the contact list 
+    contactList.push(informationObject);
+    //adding new contact to local storage
+    localStorage.setItem("contactList",JSON.stringify(contactList));
    
     const stringifyInformation = JSON.stringify(informationObject);//converting the informationObject into a string
     localStorage.setItem(email.value, stringifyInformation);
     console.log("user doesnt exist and is now stored");
     console.log("This is email: " + email.value.toString());
-    addEventListener("click", () => {
-      window.location.href = "../pages/chat.html";
+    addEventListener("sumbit", () => {
+    window.location.href = "../pages/chat.html";
     });
   }
+}
 });

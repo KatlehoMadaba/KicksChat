@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +10,36 @@
     <script src="../js/chat.js" defer></script>
     <script src="../js/main.js" defer></script>
 </head>
+
 <body>
     <header class="mainHeader">
         <div class="profileContainer">
-            <p class="initialLetter">K</p>
+            <p id="initialLetter">K</p>
         </div>
         <h1 class="logo"><span class="logoP1">Kicks</span><span class="logoP2">Chat</span></h1>
         <span class="gchatBtn"></span>
     </header>
     <div class="chattingGrid">
         <div class="cardLeft">
-        <div class="searchConatiner">
-            <input type="text" class="searchInput" placeholder="Search">
-        </div>
-        <div>
-            <ul class="contactList">
-                <li class="contactItem">
-                    <span class="contactIcon"></span>
-                    <span class="contactName">Thembi</span>
-                    <span class="contactTime">19:00</span>
-                </li>
-                <li class="contactItem">
-                    <span class="contactIcon"></span>
-                    <span class="contactName">Lihlumise</span>
-                    <span class="contactTime">17:00</span>
-                </li>
-                <li class="contactItem">
-                    <span class="contactIcon"></span>
-                    <span class="contactName">Rapudi</span>
-                    <span class="contactTime">16:00</span>
-                </li>
-                <li class="contactItem">
-                    <span class="contactIcon"></span>
-                    <span class="contactName">Kopano</span>
-                    <span class="contactTime">15:00</span>
-                </li>
-                <li class="contactItem">
-                    <span class="contactIcon"></span>
-                    <span class="contactName">Dineo</span>
-                    <span class="contactTime">14:00</span>
-                </li>
-            </ul>
-        </div>  
+            <div class="searchConatiner">
+                <input type="text" class="searchInput" placeholder="Search">
+            </div>
+            <div id="contactContainer">
+                <!-- <ul class="contactList">
+                    <li class="contactItem">
+                        <span class="iconContact"></span>
+                        <span class="contactName">Jale</span>
+                        <span class="contactTime">19:00</span>
+                    </li>
+                </ul>
+                <ul class="contactList">
+                    <li class="contactItem">
+                        <span class="iconContact"></span>
+                        <span class="contactName"></span>
+                        <span class="contactTime">19:00</span>
+                    </li>
+                </ul> -->
+            </div>
         </div>
         <section class="box cardRight" id="chatSection">
             <div class="chatHeader">
@@ -58,15 +47,15 @@
                 <h1 class="username" id="showUsername">Thembi</h1>
                 <span class="chatDate">2025/02/11</span>
             </div>
-            <div class="chatMessages">
-                <div class="messageSent">Hey, how are you today? <span class="messageTime">18:00</span></div>
-                <div class="messageSent">Hey, how are you today? <span class="messageTime">19:10</span></div>
-                <div class="messageReceived">Hey, how are you today? <span class="messageTime">19:00</span></div>
-                <div class="messageReceived">Hey, how are you today? <span class="messageTime">19:30</span></div>
+            <div class="chatMessages" id="chatMessages">
+                <div id="textSent" class="messageSent"></div>
+                <div id="textRecieved" class="messageReceived"></div>
+                <div id="text"></div>
             </div>
-            <div  id="chatContainer">
-                <textarea class="txtareaContainer"placeholder="Please type your message here.." id="messageInput"></textarea>     
-                <button class="sendBtn" id="sendBtn"></button> 
+            <div id="chatContainer">
+                <textarea class="txtareaContainer" placeholder="Please type your message here.."
+                    id="messageInput"></textarea>
+                <button class="sendBtn" id="sendBtn"></button>
             </div>
         </section>
     </div>
