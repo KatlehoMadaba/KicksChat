@@ -46,7 +46,7 @@
     displayChats();
     
     //send messages 
-    function sendMessage (){
+
         sendBtn.addEventListener('click',(e)=>{
             e.preventDefault();
             const messageValue = messageInput.value.trim();
@@ -72,7 +72,7 @@
             messageInput.value = "";
     
         })
-    }
+
   
            //fomatting date
            function dateTime(dt){

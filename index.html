@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/index.css">
 
-    <script src="../project-root/js/index.js" defer></script>
+    <script src="./js/chat.js" defer></script>
 </head>
 
 <body>
     <div class="mainGrid">
         <div class=" box cardLeft">
-            <img src="../project-root/assets/images/splashImg.png" alt="landingPage sneakers" class="formImages">
+            <img src="./assets/images/splashImg.png" alt="landingPage sneakers" class="formImages">
         </div>
         <div class="box cardRight">
             <div class="formSection">
@@ -30,4 +30,12 @@
     </div>
 </body>
 
+<script>  
+document.getElementById("loginextBtn").addEventListener("click",()=>{
+    window.location.href="./pages/login.html"
+});
+document.getElementById("signupBtn").addEventListener("click",()=>{
+    window.location.href="./pages/sign-up.html"
+});
+</script>
 </html>
