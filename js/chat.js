@@ -40,6 +40,7 @@ window.onload = function () {
           li.addEventListener('click', (e) => {
               convoClick(contact.username);
               loadChat(contact.username); // Load chat for the selected contact
+              sendMessage(contact.username)
           });
           let span = document.createElement("span");
           let span1 = document.createElement("span");
