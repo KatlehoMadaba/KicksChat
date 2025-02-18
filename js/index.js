@@ -1,9 +1,9 @@
 
 document.getElementById("loginextBtn").addEventListener("click",()=>{
-    window.location.href="./pages/login.html"
+    window.location.href="./pages/login.html";
 });
 document.getElementById("signupBtn").addEventListener("click",()=>{
 
-    window.location.href="./pages/sign-up.html"
+    window.location.href="./pages/sign-up.html";
 });
 
