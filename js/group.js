@@ -7,7 +7,8 @@ window.addEventListener("storage",(e)=>{
 const sendBtn =document.getElementById("sendBtn");
 const messageInput=document.getElementById("messageInput");
 const chatMessagesContainer=document.getElementById("chatMessages");
-const personalchatBtn= document.getElementById("btnChat")
+const personalchatBtn= document.getElementById("btnChat");
+const logoutBtn =document.getElementById("logout");
 
 //retriving current user
 const emailAddress=sessionStorage.getItem("email");
@@ -75,7 +76,10 @@ displayChats();
 
     })
     
-
+    logoutBtn.addEventListener("click",(e)=>{
+        window.location.href="../index.html";
+    
+    })
        //fomatting date
        function dateTime(dt){
         let date =new Date (dt)

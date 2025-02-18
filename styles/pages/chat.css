@@ -103,7 +103,7 @@
 }
 
 /*icons*/
-.logout {
+#logout {
     display: inline-block;
     width:90px;
     height:90px;
@@ -115,6 +115,7 @@
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    cursor: pointer;
   }
 .iconContact{
     width:50px;

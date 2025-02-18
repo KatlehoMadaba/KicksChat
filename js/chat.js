@@ -135,17 +135,17 @@ window.onload = function () {
       loadChat(username); // Load chat when a contact is clicked
   }
 
-  // Switching to group chat
+  //route to group
   gchatBtn.addEventListener("click", (e) => {
       window.location.href = "../pages/group-chat.html";
   });
+  logoutBtn.addEventListener("click",(e)=>{
+    window.location.href="../index.html";
+
+})
 
   // Ffirst user diplay on page load 
   if (contactList.length > 0) {
       loadChat(contactList[0].username); 
   }
 };
-logout.addEventListener("click",(e)=>{
-    window.location.href="."
-    
-})
