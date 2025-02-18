@@ -33,7 +33,7 @@
                 messageDiv.classList.add('messageSent');
             }
             else{
-                messageDiv.classList.add('messageReceived');
+                messageDiv.classList.add('messageRecieved');
             }
             messageDiv.innerHTML=
             `<span class="messageSender">${message.currentUser}</span>
@@ -46,6 +46,7 @@
     displayChats();
     
     //send messages 
+    function sendMessage (){
         sendBtn.addEventListener('click',(e)=>{
             e.preventDefault();
             const messageValue = messageInput.value.trim();
@@ -71,6 +72,8 @@
             messageInput.value = "";
     
         })
+    }
+  
            //fomatting date
            function dateTime(dt){
             let date =new Date (dt)
