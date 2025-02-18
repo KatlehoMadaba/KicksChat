@@ -17,7 +17,7 @@
             <p id="initialLetter"></p>
         </div>
         <h1 class="logo"><span class="logoP1">Kicks</span><span class="logoP2">Chat</span></h1>
-        <span class="personalchatBtn"></span>
+        <button class="personalchatBtn" id="btnChat" onclick="redirect()"></button>
     </header>
     <div class="chattingGrid">
         <div class="cardLeft">
@@ -43,8 +43,6 @@
                 <span class="chatDate"></span>
             </div>
             <div class="chatMessages" id="chatMessages">
-                <div id="textMessage" class="messageSent"></div>
-                <div id="textMessage" class="messageReceived"></div>
             </div>
             <div id="chatContainer">
                 <textarea class="txtareaContainer" placeholder="Please type your message here.." id="messageInput"></textarea>

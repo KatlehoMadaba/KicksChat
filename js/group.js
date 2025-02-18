@@ -7,6 +7,7 @@
     const sendBtn =document.getElementById("sendBtn");
     const messageInput=document.getElementById("messageInput");
     const chatMessagesContainer=document.getElementById("chatMessages");
+    const personalchatBtn= document.getElementById("btnChat")
 
     //retriving current user
     const emailAddress=sessionStorage.getItem("email");
@@ -19,7 +20,9 @@
         console.log("Current user:",currentUser);
     }
    
-
+    function redirect (){
+        window.location.href="../pages/chat.html"
+    }
     //groupChat intilization group chat messages from localStorage
     let groupchatMessages =JSON.parse(localStorage.getItem("groupChat")) || [];
 
@@ -33,7 +36,7 @@
                 messageDiv.classList.add('messageSent');
             }
             else{
-                messageDiv.classList.add('messageRecieved');
+                messageDiv.classList.add('messageReceived');
             }
             messageDiv.innerHTML=
             `<span class="messageSender">${message.currentUser}</span>
@@ -42,11 +45,10 @@
             chatMessagesContainer.appendChild(messageDiv);
         })
     }
-    //chats to be displayed on intial page load
+
     displayChats();
-    
     //send messages 
-    function sendMessage (){
+
         sendBtn.addEventListener('click',(e)=>{
             e.preventDefault();
             const messageValue = messageInput.value.trim();
@@ -72,7 +74,7 @@
             messageInput.value = "";
     
         })
-    }
+        
   
            //fomatting date
            function dateTime(dt){
