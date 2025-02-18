@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
     --primary-color: #922F94;
-    --primary-font:"Frank Ruhl Libre", serif; font-optical-sizing: auto; font-weight: 900; font-style: normal; font-optical-sizing: auto; font-style: normal; box-sizing: border-box;
+    --primary-font: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
     --primary-btn-background: linear-gradient(90deg, rgba(228, 59, 166, 1) 0%, rgba(0, 0, 0, 1) 35%);
     --seconday-color: #000000;
-    --tertiary-color:#E43BA6;
-    --quaternary-color:#AEA8AE;
+    --tertiary-color: #E43BA6;
+    --quaternary-color: #AEA8AE;
 }
 
 .frank-ruhl-libre {
@@ -15,6 +22,7 @@
     font-style: normal;
 }
 
+/*Headings*/
 .primaryHeading {
     color: var(--primary-color);
     font-family: var(--primary-font);
@@ -24,41 +32,53 @@
     font-style: normal;
     font-size: 150px;
     padding-right: 50%;
-    /* background-color: red; */
     margin: 0 auto;
     min-width: 250px;
     max-height: 800px;
 }
-#primaryHeading2{
+
+#primaryHeading2 {
     color: #000000;
 }
+
 .secondaryformHeading {
     font-family: var(--primary-font);
-    color:var(--seconday-color);
+    color: var(--tertiary-color);
     font-weight: 900;
     font-style: normal;
     font-size: 400%;
     /* background-color: yellow; */
     margin: 0 auto;
     width: 50%;
+    font-size: 80px;
+    outline:#000000;
 }
+
 #middleHeading {
     margin-right: 100px;
     font-family: var(--primary-font);
     font-size: 100px;
     padding-left: 20%;
+    font-size: 150px;
 }
-.logoP1{
-font-family: "Frank Ruhl Libre", serif;
-color: var(--primary-color);
-font-size:80px;
+
+#logoP1 {
+    font-family: "Frank Ruhl Libre", serif;
+    color: var(--primary-color);
+    min-width: 250px;
+    max-height: 800px;
+    font-size: 150px;
+
 }
-.logoP2{
+
+#logoP2 {
     font-family: "Frank Ruhl Libre", serif;
     color: var(--seconday-color);
-    font-size:80px;
+    font-size: 80px;
     margin: auto 0;
+    font-size: 150px;
 }
+
 /*buttons*/
 .btnBasics {
     width: 529px;
@@ -72,12 +92,11 @@ font-size:80px;
     justify-content: center;
     outline: none;
     cursor: pointer;
-    transition:background 1s;
 }
 
 .primaryBtn {
     color: white;
-    background:var(--primary-btn-background);
+    background: var(--primary-btn-background);
     outline: none;
     border: 2px;
     align-items: center;
@@ -91,6 +110,7 @@ font-size:80px;
     background-color: white;
     border: 7px solid var(--primary-color);
     z-index: 8;
+    margin-left:100px ;
 }
 
 .primaryBtn,
@@ -102,43 +122,48 @@ font-size:80px;
     display: inline-block;
     width: 30%;
 }
-/*Input Boxes and  input labels*/
-.searchInput{
-    margin-top:150px;
-    border:5px solid var(--seconday-color);
-    width: 60rem;
-    border-radius:15px;
-    line-height:3rem;
-    outline: none;
-  }
-  .inputTxt{
-      box-sizing: border-box;
-      flex-grow:1;
-      min-width:0;
-      padding: 1em;
-      height: 50px;
-      width:90%;
-      border:4px solid var(--tertiary-color);
-      line-height: 2rem;
-      border-radius: 15px;
-      outline: none;
-      transition: 150ms ease;
 
-  }
-  /* .inputTxt :hover{
+/*Input Boxes and  input labels*/
+.searchInput {
+    margin-top: 150px;
+    border: 5px solid var(--seconday-color);
+    width: 60rem;
+    border-radius: 15px;
+    line-height: 3rem;
+    outline: none;
+}
+
+.inputTxt {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    padding: 1em;
+    height: 50px;
+    width: 90%;
+    border: 4px solid var(--tertiary-color);
+    line-height: 2rem;
+    border-radius: 15px;
+    outline: none;
+    transition: 150ms ease;
+    font-size: 25px;
+    font-family: var(--primary-font);
+
+}
+
+/* .inputTxt :hover{
     border:2px var(--primary-color)
   } */
-  .inputLabel{
-    font-family:"Frank Ruhl Libre", serif;
+.inputLabel {
+    font-family: "Frank Ruhl Libre", serif;
     font-size: 30px;
-    color:var(--primary-color);
+    color: var(--primary-color);
     font-weight: medium;
     flex-shrink: 0;
     height: 50px;
     width: 50px;
 
-  }
-  
+}
+
 
 /* forms and pictures pages  */
 .mainGrid {
@@ -166,26 +191,30 @@ font-size:80px;
 }
 
 .cardLeft {
-    /*Comment to be deleted */
-    /* background-color: blue; */
+    
 }
 
 .cardRight {
     /*Comment to be deleted */
     /* background-color: yellow ; */
+    border-radius: 5%;
     margin: 0 auto;
     width: 100%;
-
+    
 }
+
 /*form section*/
-#error_messages{
-    color:red;
+#error_messages {
+    color: red;
     font-size: 20px;
     align-items: center;
 }
+
 .formImages {
     width: 100%;
     height: 100vh;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .formSection {
@@ -197,58 +226,62 @@ font-size:80px;
     justify-content: center;
 
 }
-.formInput{
+
+.formInput {
     /* background-color: aqua; */
 }
-.signloginBtn{
-    /* background-color: #E43BA6; */
+
+.signloginBtn {
     align-items: center;
     justify-content: center;
     margin: auto 0;
     padding-top: 5%;
-    padding-bottom:5%;
+    padding-bottom: 5%;
 }
+
 /*In app styles */
-.txtareaContainer{
+.txtareaContainer {
     position: relative;
     width: 100%;
     max-width: 1100px;
 }
 
- textarea{
+textarea {
     width: 96%;
     height: 60px;
-    padding-left:40px;
-    padding-top:10px;
+    padding-left: 40px;
+    padding-top: 10px;
     padding-right: 10px;
     border: 2px solid var(--seconday-color);
     border-radius: 30px;
     font-size: 16px;
     font-family: "Frank Ruhl Libre", serif;
     resize: none;
-    box-sizing: border-box ;
+    box-sizing: border-box;
     background-color: #f9f9f9;
     transition: border-color 0.3s;
     margin-top: 80%;
- }
- textarea:focus{
-    border-color:var(--primary-color) ;
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
     background-color: #FFF;
     outline: none;
- }
- 
- .sendBtn:hover{
+}
+
+.sendBtn:hover {
     background-color: #E43BA6;
- }
- .sendBtn{
+}
+
+.sendBtn {
     margin-top: 38%;
     margin-right: 5%;
     position: absolute;
-    top:50%;
+    top: 50%;
     padding: 10px 15px;
     background-color: #000000;
     border: none;
-    border-radius:50%;
+    border-radius: 50%;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -264,41 +297,47 @@ font-size:80px;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-  }
-  .username{
+}
+
+.username {
     background-color: aqua;
     margin-bottom: 700%;
     margin-bottom: 600%;
-    
-  }
+
+}
+
 /*contact list*/
-.topSection{
+.topSection {
     background-color: aqua;
 }
-.contactName{
-    color:var(--primary-color);
+
+.contactName {
+    color: var(--primary-color);
     font-family: var(--primary-font);
     font-size: 48px;
     display: inline-block;
     padding-left: 20%;
 }
-.iconContact{
-        margin-bottom: 69%;
-        width:48px;
-        height:48px;
-        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23000' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M6 40.8V42h36v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C35.92 28 33.68 28 29.2 28H18.8c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C6 34.08 6 36.32 6 40.8'/%3E%3C/svg%3E");
-        background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: 100% 100%;
-        mask-size: 100% 100%;
+
+.iconContact {
+    margin-bottom: 69%;
+    width: 48px;
+    height: 48px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23000' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M6 40.8V42h36v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C35.92 28 33.68 28 29.2 28H18.8c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C6 34.08 6 36.32 6 40.8'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
-.contactList{
+
+.contactList {
     border: 10px solid var(--tertiary-color);
-    border-radius:15px;
+    border-radius: 15px;
 }
+
 /* Icon imported*/
 .gchatBtn {
     width: 5em;
@@ -312,6 +351,7 @@ font-size:80px;
     -webkit-mask-size: 100% 100%;
     mask-size: 100%;
 }
+
 /*Header Section*/
 .mainHeader {
     background-color: var(--tertiary-color);
@@ -327,12 +367,14 @@ font-size:80px;
     align-items: center;
 
 }
+
 .headerContent {
     display: flex;
     flex-flow: row;
     align-items: center;
     margin-left: 5%;
 }
+
 .profileContainer {
     background-color: #FFF;
     height: 4rem;
@@ -360,6 +402,7 @@ font-size:80px;
     margin-left: 40%;
     display: inline-block;
 }
+
 /*In app */
 
 .secondaryHeading {
@@ -368,8 +411,7 @@ font-size:80px;
     font-size: 60px;
 }
 
-.chatGrid {
-}
+.chatGrid {}
 
 .icons {}
 
@@ -378,10 +420,11 @@ font-size:80px;
 .recievedBubble {
     margin-top: 10%;
 }
-.currentContact{
+
+.currentContact {
     margin-top: 10%;
     font-family: var(--primary-font);
-    font-size:100px;
+    font-size: 100px;
     margin-left: 25%;
     z-index: 5;
 }
