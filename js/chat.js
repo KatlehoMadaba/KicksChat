@@ -1,121 +1,128 @@
 window.onload = function () {
-  //retriving email address from session
   const emailAddress = sessionStorage.getItem("email");
-  console.log(emailAddress);
-
-  //retreving email address key properties using emailAddress
   const objectJSON = JSON.parse(localStorage.getItem(emailAddress));
-  console.log("This is the user name :" + objectJSON.username);
-  const userName = sessionStorage.setItem("username", objectJSON.username);
-  console.log("This is the username session  :" + sessionStorage.getItem("username"));
-
-
-  //retriving only the username from the object
   const domUsername = objectJSON.username;
-  ////display current user
-  const initialLetter = document.getElementById("initialLetter");
-  // initialLetter.textContent = domUsername.subtring(0,1);
-  initialLetter.textContent = domUsername;
-
   const sendBtn = document.getElementById("sendBtn");
   const messageInput = document.getElementById("messageInput");
-  const textSent = document.getElementById("textSent");
-  const chatContainer = document.getElementById("chatContainer");
-  const messagesContainer = document.getElementById("textSent");
-  const chatMessages = document.getElementById("chatMessages");
+  const chatMessagesContainer = document.getElementById("chatMessages");
   const contactContainer = document.getElementById("contactContainer");
-  const convoConvo=document.getElementById("showUsername");
-  const gchatBtn=document.getElementById("gchatBtn");
-  //retriving contact list
-  let contactList = JSON.parse(localStorage.getItem("contactList")) || [];
-  console.log(contactList);
-  contactList.innerHTML = "";
+  const convoConvo = document.getElementById("showUsername"); // Ensure that exists
+  const logOut = document.getElementById("logOut");
 
-  //displaying contacts
+  // Retrieve contacts and store in the contact list
+  let contactList = JSON.parse(localStorage.getItem("contactList")) || [];
+
+  // Display contacts in the contact list
   contactList.forEach((contact) => {
-    if(contact.email!==emailAddress){//excluding existing user!
+    if (contact.email !== emailAddress) {
       let ul = document.createElement("ul");
       let li = document.createElement("li");
-      li.addEventListener('click',(e)=>{
-        convoClick(contact.username)
-        sendMessage(contact.username);
-      })
+      li.addEventListener("click", () => {
+        convoClick(contact.username);
+        loadChat(contact.username);
+      });
       let span = document.createElement("span");
-      let span1 = document.createElement("span");
       li.classList.add("contactItem");
-      span1.classList.add("iconContact");
       span.classList.add("contactName");
       span.textContent = contact.username;
       ul.appendChild(li);
-      li.appendChild(span1);
-      li.appendChild(span); //what ever is inside the bracket is the child of li
+      li.appendChild(span);
       contactContainer.appendChild(li);
     }
   });
 
-  //clicking on the user 
-  function convoClick(username){
-    document.addEventListener('click',(e)=>{
-      convoConvo.textContent=username;
-    })
+  //  selected  chat
+  function loadChat(selectedUser) {
+    let messageList = JSON.parse(localStorage.getItem("messages")) || [];
+    let filteredMessages = messageList.filter(
+      (message) =>
+        (message.senderUsername === selectedUser &&
+          message.recieverUsername === domUsername) ||
+        (message.senderUsername === domUsername &&
+          message.recieverUsername === selectedUser)
+    );
+
+    chatMessagesContainer.innerHTML = ""; // Clear
+    filteredMessages.forEach((message) => {
+      const messageDiv = document.createElement("div");
+      if (message.senderUsername === domUsername) {
+        messageDiv.classList.add("messageSent");
+      } else {
+        messageDiv.classList.add("messageReceived");
+      }
+      messageDiv.innerHTML = `<span class="messageSender">${
+        message.senderUsername
+      }</span>
+           <span class="messageText">${message.message}</span>
+           <span class="messageTime">${dateTime(message.date_time)}</span>`;
+      chatMessagesContainer.appendChild(messageDiv);
+    });
+
+    if (convoConvo) {
+      convoConvo.textContent = selectedUser;
+    }
   }
 
-  //Swtiching to group chat 
-    gchatBtn.addEventListener("click",(e)=>{
-      addEventListener("click", () => {
-        window.location.href = "../pages/group-chat.html";
-      });
-    })
-
-  //Sending a message
-  function sendMessage (recieverUsername) {
-     sendBtn.addEventListener("click", (e) => {
+  function sendMessage(recieverUsername) {
+    sendBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      const messageValue = messageInput.value;
+
+      const messageValue = messageInput.value.trim();
+      if (!messageValue) {
+        console.log("empty message");
+        return;
+      }
+
       const dateTime = Date.now().toString();
-      console.log(
-        "Message saved to localSorage:",
-        messageValue + "By this email address" + emailAddress
-      );
-      let messages = {
+
+      let message = {
         email: emailAddress,
         senderUsername: domUsername,
-        recieverUsername:recieverUsername,
-        message: messageInput.value,
+        recieverUsername: recieverUsername,
+        message: messageValue,
         date_time: dateTime,
         status: "sent",
       };
-      // //Json object to string
-      //messages to local storage
+
       let storedMessages = JSON.parse(localStorage.getItem("messages")) || [];
-      storedMessages.innerHTML = "";
-      //displaying existing messages
-  
-      storedMessages.forEach((mes) => {
-        let messageSent= document.createElement("div");
-        messageSent.classList.add("messageSent");
-        messageSent.textContent=mes.message
-        chatMessages.appendChild(messageSent)
-        const messageItem = document.getElementById("textSent");
-        if (messageItem !== null) {
-          messageItem.textContent = mes.message;
-        
-        }
-      });
-      storedMessages.push(messages);
-  
-      //saving the message to the array
+      storedMessages.push(message);
       localStorage.setItem("messages", JSON.stringify(storedMessages));
-      //getting last index of the arrray
-      const recentMessages = storedMessages[storedMessages.length - 1];
-      console.log("These are the recent messages" + recentMessages);
-      //display message
-      textSent.textContent = recentMessages.message;
-  
-      //clear text box after sending
+
+      console.log(
+        "Message saved to localStorage:",
+        messageValue + " By this email address " + emailAddress
+      );
+
+      //reload
+      loadChat(recieverUsername);
+
       messageInput.value = "";
-  
     });
   }
 
+  function dateTime(dt) {
+    let date = new Date(dt);
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    hour = hour < 10 ? "0" + hour : hour;
+    minute = minute < 10 ? "0" + minute : minute;
+    return `${hour}:${minute}`;
+  }
+
+  function convoClick(username) {
+    loadChat(username);
+    sendMessage(username);
+  }
+
+  if (contactList.length > 0) {
+    loadChat(contactList[0].username); //show first  person
+  }
+
+  function logOut() {
+    logOut.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href="../index.html"
+      sessionStorage.setItem("")
+    });
+  }
 };
