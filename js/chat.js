@@ -19,7 +19,7 @@ window.onload = function () {
   const domUsername = objectJSON.username;
   // Display current user
   const initialLetter = document.getElementById("initialLetter");
-  initialLetter.textContent = domUsername;
+  initialLetter.textContent = domUsername[0].toUpperCase();
 
   const sendBtn = document.getElementById("sendBtn");
   const messageInput = document.getElementById("messageInput");
@@ -28,7 +28,7 @@ window.onload = function () {
   const contactContainer = document.getElementById("contactContainer");
   const convoConvo = document.getElementById("showUsername"); // Ensure this exists
   const gchatBtn = document.getElementById("gchatBtn");
-
+  const logoutBtn =document.getElementById("logout");
   // Retrieving contact list
   let contactList = JSON.parse(localStorage.getItem("contactList")) || [];
 
@@ -140,8 +140,12 @@ window.onload = function () {
       window.location.href = "../pages/group-chat.html";
   });
 
-  // Display the first contact's chat when the page loads (optional)
+  // Ffirst user diplay on page load 
   if (contactList.length > 0) {
-      loadChat(contactList[0].username); // Automatically load the first contact's chat
+      loadChat(contactList[0].username); 
   }
 };
+logout.addEventListener("click",(e)=>{
+    window.location.href="."
+    
+})

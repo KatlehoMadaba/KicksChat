@@ -6,6 +6,10 @@
     --tertiary-color:#E43BA6;
     --quaternary-color:#AEA8AE;
 }
+/*Header*/
+.username{
+    font-size: 60px;
+}
 .mainHeader {
     display: flex;
     align-items: center;
@@ -98,17 +102,23 @@
     background-color: #F8BBD0;
 }
 
-.iconContact {
-    width: 30px;
-    height: 30px;
-    background: black;
-    border-radius: 50%;
+/*icons*/
+.logout {
     display: inline-block;
-    margin-left:5% ;
-}
+    width:90px;
+    height:90px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='m19 10l-6-5v3H6v4h7v3zM3 3h8V1H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H3z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
 .iconContact{
-    width:48px;
-    height:48px;
+    width:50px;
+    height:50px;
     --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23000' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M6 40.8V42h36v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C35.92 28 33.68 28 29.2 28H18.8c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C6 34.08 6 36.32 6 40.8'/%3E%3C/svg%3E");
     background-color: currentColor;
     -webkit-mask-image: var(--svg);
@@ -117,6 +127,10 @@
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    background: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left:5% ;
 }
 .contactName {
     flex-grow: 1;
@@ -253,30 +267,4 @@
     border-radius: 10px;
 }
 
-/* .textRecieved {}
 
-.textSent {}
-
-.messageSent {
-    color: green;
-    float: right;
-    position: left;
-    border-color: black;
-    background-color: aqua;
-    margin-left: 2000%;
-    padding-left: 240px;
-}
-
-.messagesRecieved {
-    color: black;
-    float: right;
-    position: left;
-    border-color: pink;
-    background-color:red ;
-    margin-right: 200%;
-    padding-right: 85px;
-}
-.contactConatiner{
-
-}
- */
