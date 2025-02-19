@@ -29,6 +29,11 @@ window.onload = function () {
   const convoConvo = document.getElementById("showUsername"); // Ensure this exists
   const gchatBtn = document.getElementById("gchatBtn");
   const logoutBtn =document.getElementById("logout");
+  const profileBtn = document.getElementById("userInfo");
+  const closeprofileBtn=document.getElementById('closeBtn');
+  const profileInfo=document.getElementById('profilename')
+  const cardPopup=document.getElementById('cardPopup');
+  const infoContact=document.getElementById('infoContact');
   // Retrieving contact list
   let contactList = JSON.parse(localStorage.getItem("contactList")) || [];
 
@@ -38,9 +43,13 @@ window.onload = function () {
           let ul = document.createElement("ul");
           let li = document.createElement("li");
           li.addEventListener('click', (e) => {
+            //attribues of the contact list
+            console.log(contact. email+"The email selected")
               convoClick(contact.username);
               loadChat(contact.username); // Load chat for the selected contact
-              sendMessage(contact.username)
+              sendMessage(contact.username);
+              showContactInfo(contact.email)
+
           });
           let span = document.createElement("span");
           let span1 = document.createElement("span");
@@ -84,6 +93,7 @@ window.onload = function () {
       // Update conversation header to show the selected user's name
       if (convoConvo) {
           convoConvo.textContent = selectedUser;
+          profileInfo.textContent=selectedUser;
       }
   }
 
@@ -113,13 +123,17 @@ window.onload = function () {
 
           // Reload chat for the selected user
           loadChat(recieverUsername);
+          //const recieverInfoJson=JSON.parse(localStorage.getItem("contactList"));
+
 
           // Clear message input after sending
           messageInput.value = "";
       });
   }
 
-  // Function to format date and time
+  function showContactInfo(email){
+    infoContact.textContent=email
+  }
   function dateTime(dt) {
       let date = new Date(dt);
       let hour = date.getHours();
@@ -135,7 +149,7 @@ window.onload = function () {
       loadChat(username); // Load chat when a contact is clicked
   }
 
-  //route to group
+  //route to g
   gchatBtn.addEventListener("click", (e) => {
       window.location.href = "../pages/group-chat.html";
   });
@@ -143,6 +157,15 @@ window.onload = function () {
     window.location.href="../index.html";
 
 })
+//showing contact pop-up
+    profileBtn.addEventListener("click",()=>{
+        cardPopup.style.display='block';
+    })
+//closing contact Pop-up
+    closeprofileBtn.addEventListener("click",()=>{
+        cardPopup.style.display='none';
+    })
+
 
   // Ffirst user diplay on page load 
   if (contactList.length > 0) {
