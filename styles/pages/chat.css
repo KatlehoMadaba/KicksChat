@@ -222,6 +222,13 @@
     position: left;
     margin-left: 50%;
 }
+.messageText{
+    font-size:30px
+}
+.messageSender{
+    font-size: 40px;
+    color:#c2185b;
+}
 .messageTime {
     font-size: 20px;
     color: var(--seconday-color);
@@ -256,10 +263,9 @@
 
 .sendBtn {
     margin-right: 5%;
-    margin-top: 30%;
     margin-bottom:10% ;
     position: absolute;
-    top:50%;
+    top:105%;
     padding: 10px 15px;
     background-color: #000000;
     border: none;
@@ -468,3 +474,4 @@ body {
     
 }
 
+#chatContainer{ display: flex}

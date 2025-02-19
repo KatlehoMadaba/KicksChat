@@ -214,8 +214,9 @@
 }
 .messageSender{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 33px;
     margin-bottom:5px;
+    font-weight: 50px;
 }
 .messageReceived {
     background-color: var(--tertiary-color);
@@ -224,7 +225,7 @@
 }
 .messageText {
     max-width: 85%; 
-
+    font-size: 30px;
     margin: auto 0;
 }
 .messageTime {
@@ -260,11 +261,9 @@
 }
 
 .sendBtn {
-    margin-right: 5%;
-    margin-top: 30%;
+    margin-right: 6%;
     margin-bottom:10% ;
     position: absolute;
-    top:50%;
     padding: 10px 15px;
     background-color: #000000;
     border: none;
@@ -296,3 +295,4 @@
 }
 
 
+#chatContainer{ display: flex}
