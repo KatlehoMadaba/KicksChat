@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conatct Profile</title>
+    <style>
+        body {
+            position: relative;
+        }
+        
+        /* Main content */
+        .content {
+            background-color: lightgray;
+            padding: 100px;
+            text-align: center;
+            height: 100vh;
+        }
+        
+        /* Card Styles */
+        .card {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 10;
+            display: none; /* Initially hidden */
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+        /* Button Styles */
+        .showCardBtn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .showCardBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="">
+    <h1>Main Content</h1>
+    <p>This is the background content.</p>
+    <button class="showCardBtn" id="showCardBtn">Show Card</button>
+</div>
+
+<div class="card" id="card">
+    <h2>Card Title</h2>
+    <p>This is a card displayed on top of the content.</p>
+</div>
+
+<script>
+    // Get the button and card elements
+    const button = document.getElementById('showCardBtn');
+    const card = document.getElementById('card');
+
+    // Add an event listener to the button to toggle card visibility
+    button.addEventListener('click', function() {
+        // Toggle the display property of the card
+        if (card.style.display === 'none' || card.style.display === '') {
+            card.style.display = 'block'; // Show the card
+        } else {
+            card.style.display = 'none'; // Hide the card
+        }
+    });
+</script>
+
+</body>
+</html>

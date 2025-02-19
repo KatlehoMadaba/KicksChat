@@ -1,3 +1,4 @@
+
 /*Headings*/
 #logoP2{
     color:black ;
@@ -17,4 +18,15 @@
     justify-content: center;
     margin: auto 0;
     padding-top: 5%;
+}
+.secondaryformHeading {
+    font-family: var(--primary-font);
+    color: var(--seconday-color);
+    font-weight: 900;
+    font-style: normal;
+    font-size: 400%;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    width: 50%;
+    font-size: 80px;
 }
