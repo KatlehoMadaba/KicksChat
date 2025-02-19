@@ -122,12 +122,11 @@
   });
 // Listen for changes in localStorage
 window.addEventListener('storage', function(event) {
-    // Check if the key of the updated storage item is 'messageUpdate'
+    //checking whether it is key messages being updated in the local storage
     if (event.key === 'messages') {
-      console.log('Message update detected, refreshing chat...');
-      // Reload the chat for the current user
+      // Reloading the chat for the current user
       loadChat(convoConvo.textContent);  
-      // The current conversation is stored in convoConvo.textContent
+      // The conversation that is  happing is stored in convoConvo.textContent
     }
   });
   function showContactInfo(email) {

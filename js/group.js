@@ -1,4 +1,3 @@
-
 window.addEventListener("storage",(e)=>{
     if(e.key == 'groupChat'){
         displayChats();
@@ -7,28 +6,31 @@ window.addEventListener("storage",(e)=>{
 const sendBtn =document.getElementById("sendBtn");
 const messageInput=document.getElementById("messageInput");
 const chatMessagesContainer=document.getElementById("chatMessages");
-const personalchatBtn= document.getElementById("btnChat");
-const logoutBtn =document.getElementById("logout");
+const personalchatBtn= document.getElementById("btnChat")
 
 //retriving current user
 const emailAddress=sessionStorage.getItem("email");
 const currentUser =sessionStorage.getItem("username");
 
 //display current user intialLetter
-function profilePicture(){
+
     const initialLetter= document.getElementById("initialLetter")
-    initialLetter.textContent=currentUser;
+    initialLetter.textContent=currentUser[0].toUpperCase();
     console.log("Current user:",currentUser);
-}
+
 
 function redirect (){
     window.location.href="../pages/chat.html"
 }
-//groupChat intilization group chat messages from localStorage
-let groupchatMessages =JSON.parse(localStorage.getItem("groupChat")) || [];
+
+function loadGroupChat(){
+    return JSON.parse(localStorage.getItem("groupChat")) || [];
+}
+
 
 //displaying messages that already exist 
 function displayChats (){
+    const groupchatMessages=loadGroupChat();
     //clearing to prevent duplication
     chatMessagesContainer.innerHTML = "" ;
     groupchatMessages.forEach((message)=>{
@@ -62,6 +64,7 @@ displayChats();
             date_time:Date.now(),
             message:messageValue,
         };
+        let groupchatMessages = loadGroupChat();
         //Add new message to the group chat array
         groupchatMessages.push(userMessages);
 
@@ -76,10 +79,7 @@ displayChats();
 
     })
     
-    logoutBtn.addEventListener("click",(e)=>{
-        window.location.href="../index.html";
-    
-    })
+
        //fomatting date
        function dateTime(dt){
         let date =new Date (dt)
