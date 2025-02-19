@@ -1,4 +1,8 @@
-
+window.addEventListener("storage", (e) => {
+    if (e.key == "messageUpdates") {
+    loadGroupChat()
+    }
+  });
 const sendBtn = document.getElementById("sendBtn");
 const messageInput = document.getElementById("messageInput");
 const chatMessagesContainer = document.getElementById("chatMessages");
@@ -86,8 +90,4 @@ function dateTime(dt) {
   minute = minute < 10 ? "0" + minute : minute;
   return `${hour}:${minute}`;
 }
-window.addEventListener("storage", (e) => {
-    if (e.key == "messageUpdates") {
-      displayChats();
-    }
-  });
+
